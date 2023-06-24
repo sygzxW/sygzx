@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<!-- 
+    stole some code from nl > rtm.bio xd
+-->
+
+<html lang="en">
+    <head>
+        <style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap');
+  
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #000;
+      color: #fff;
+      font-family: 'Roboto Mono', monospace;
+      overflow-y: hidden;
+      overflow-x: hidden;
+  }
+  
+  .kill {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 15px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #fff;
+  }
+  
+  .kill a {
+      font-size: 18px;
+      padding: 6px;
+      border-radius: 100%;
+      transition: 0.2s;
+      color: #fff;
+  }
+  
+  .kill a:hover {
+      opacity: 40%;
+      font-size: 20px;
+      color:rgba(255, 0, 0, 0.568);
+  }
+  
+  .main {
+      height: 1px;
+      width: 100%;
+      text-align: right;
+      color: #f7f7f7eb;
+      letter-spacing: 1px;
+      z-index: 9999;
+      font-size: 13px;
+  }
+  
+  
+  .line {
+      height: 3px;
+      width: 300px;
+      background-color: #fff;
+      color: #fff;
+  }
+  
+  .small {
+    color: #e8e8e899;
+    font-size: 0.9rem;
+  }
+  
+  .background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -3;
+  }
+  
+  #pattern {
+    background: transparent url('images/dot.png') repeat 0 0;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: -1;
+    opacity: 1;
+  }
+  
+  #pattern,
+  #background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #background {
+    z-index: -2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 135%;
+    min-height: 110%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    overflow: hidden;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+  }
+
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/bg.css">
+        <link rel="stylesheet" href="assets/css/meteor.css">
+        <link rel="stylesheet" href="assets/css/firefly.css">
+        <script src="assets/js/lol.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+        <title id="title-name">hi its sygzx</title>
+        <meta id="meta-name" property="og:title" content="dum">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta id="meta-image" property="og:image" content="assets/loader.gif">
+        <meta content="hi its sygzx" property='og:site_name'>
+        <meta name="description" content="sygzx | @skidware">
+        <meta name="description" content="^_^">
+        <meta name="theme-color" content="#2f3136">
+        <style>
+            .clickanywhere {
+                margin: 0;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: roboto, sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                height: 100%;   
+                overflow-x: hidden;
+                overflow-y: hidden;
+                background: radial-gradient(ellipse at bottom, #3f3f3f  0%, #090A0F 100%); 
+                background-position: center;
+                background-image: url(assets/bg/1.gif);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                min-height: 100vh;
+                gap: 30px;
+                
+            }
+            @media(max-width:730px) {
+                body {
+                    margin: 0;
+                    padding: 0;
+                    font-family: roboto, sans-serif;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    height: 100%;   
+                    overflow-x: hidden;
+                    background: radial-gradient(ellipse at bottom, #301934   0%, #090A0F 100%);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-attachment: fixed;
+                    zoom: 80%;
+                }
+                .wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    min-height: 100vh;
+                    gap: 30px;
+                    
+                }
+            }
+        </style>
+        <style>
+        .clickanywhere {
+            margin: 0;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        </style>
+    <body class="killwtf">
+            <audio src=""></audio>
+        <div id="pattern"></div>
+            <video class="background" id="background" loop="">
+                <source src="assets/video.mp4" type="video/mp4">
+            </video>
+        <div class="clickanywhere">
+            <h4 style="color:white; font-size: 24px;">[Click Here]</h4>
+        </div>
+        <script>
+            var audio = new Audio('assets/video.mp4');
+            var startText = document.getElementById('startText');
+
+            document.addEventListener('click', function(event) {
+              if (startText.style.opacity === '1') { // Check if the start text is visible
+                startText.style.opacity = '0'; // Fade out the start text
+
+                // Delay audio playback for 0.5 seconds to allow the fade out transition
+                setTimeout(function() {
+                  audio.play();
+                }, 500);
+            }
+            });
+        </script>
+    <div scroll="no" id="biolink" class="biolink" style="display:none; overflow: hidden;">
+            <div class="bg-animation">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+            <div id="stars4"></div>
+        </div>
+        <div class="wrapper">
+            <script>invoke("422024798458347521", "card")</script>
+            <div class="card">
+                <div id="card-title" style="color: #fff;" class="card-title"></div>
+                <div id="card-user-profile"style="color: #fff;" class="user-profile">
+                    <div class="Profile-pic">
+                        <img title="" class="card-pfp" id="pfp" src="assets/loader.gif" alt="">
+                        <div class="card-activity-dot" style="color: #fff;" id="activity-dot" aria-label="Unknown"></div>
+                    </div>
+                    <div class="user-info">
+                        <div class="card-username" style="color: #fff;" id="username"></div>
+                        <div class="card-status" style="color: #fff;" id="status"></div>
+                        <div class="card-status2" style="color: #fff;" id="status2"></div>
+                        <div class="connections">
+                           <a id="connection-username" title="" href="https://discord.com/users/422024798458347521/"><img class="connection-icon" src="assets/assets/connections/discord.svg" alt=""></a>
+                           <a title="sygzxofficial" href="https://twitter.com/sygzxofficial"><img class="connection-icon" src="assets/assets/connections/twitter.svg" alt=""></a>
+                           <a title="sygzxisup" href="https://tiktok.com/@sygzxisup"><img class="connection-icon" src="assets/assets/connections/tiktok.svg" alt=""></a> 
+                           <a title="sygzxK" href="https://t.me/sygzxK"><img class="connection-icon" src="assets/assets/connections/telegram.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <script>setPresence()</script>
+                <div id="card1-title" style="color: #fff;" class="card-title"></div>
+                <div id="card1-user-profile"style="color: #fff;" class="user-profile">
+                    <div class="Profile-pic">
+                        <img class="card1-pfp" src="assets/loader.gif" id="pfp" alt="">
+                    </div>
+                    <div class="user-info">
+                        <div class="card1-username" style="color: #fff;" id="username"></div>
+                        <div class="card1-status" style="color: #fff;" id="status"></div>
+                        <div class="card1-status2" style="color: #fff;" id="status2"></div>
+                        <div class="spotify-time">
+                            <div class="card1-spotify-time-start" id="spotify-time-start"></div>
+                            <div class="card1-spotify-time-end" id="spotify-time-end"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--
+            <div class="card1">
+                <script>setServer()</script>
+                <div id="card2-title" style="color: #fff;" class="card-title">Owner @ sai.</div>
+                <div id="card2-user-profile"style="color: #fff;" class="user-profile">
+                    <div class="user-info">
+                        <div class="card2-username" style="color: #fff;" id="username">sai.</div>
+                        <div class="card2-status" style="color: #fff;" id="status"></div>
+                        <div class="card2-status2" style="color: #fff;" id="status2"></div>
+                    </div>
+                </div>
+            </div>
+-->
+        </div>
+    </div>
+<script>
+      function playclip() {
+          if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.indexOf("MSIE 7")!=-1) || (navigator.appVersion.indexOf("MSIE 8")!=-1)) {
+              if (document.all) {
+                  document.all.sound.src = "assets/video.mp4";
+              }
+          } else {
+              {
+                  var audio = document.getElementsByTagName("audio");
+    
+                  if(audio.length > 0) audio[0].play();
+    
+                  var video = document.getElementsByTagName("video");
+    
+                  if(video.length > 0) {
+                      video = video[0];
+                      video.removeAttribute('hidden');
+                      video.play();
+                      video.volume = 0.6;
+                  }
+              }
+          }
+      }
+    
+    document.querySelector('.killwtf').addEventListener('click', function() {
+    
+    playclip();
+    });
+    
+    $(document).ready(function () {
+    $( document.body ).click(function() {
+    $(".clickanywhere").fadeOut(300);
+      $(".biolink").fadeIn(2000);
+    
+    let play = function(){document.getElementById("audio").play()}
+    
+    
+    
+    
+    });
+    });
+                         
+    
+</script>
+</html>
