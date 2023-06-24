@@ -1,2 +1,0 @@
-# sygzx
-my site
